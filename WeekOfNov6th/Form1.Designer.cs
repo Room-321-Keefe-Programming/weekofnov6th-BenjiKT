@@ -48,6 +48,9 @@
             this.btn2 = new System.Windows.Forms.Button();
             this.nudInput1 = new System.Windows.Forms.NumericUpDown();
             this.nudInput2 = new System.Windows.Forms.NumericUpDown();
+            this.btnTest = new System.Windows.Forms.Button();
+            this.btnMissle = new System.Windows.Forms.Button();
+            this.rtbString = new System.Windows.Forms.RichTextBox();
             this.grpTempConverter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudInput1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudInput2)).BeginInit();
@@ -137,6 +140,7 @@
             this.rtbOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbOutput.Location = new System.Drawing.Point(47, 478);
             this.rtbOutput.Name = "rtbOutput";
+            this.rtbOutput.ReadOnly = true;
             this.rtbOutput.Size = new System.Drawing.Size(964, 148);
             this.rtbOutput.TabIndex = 7;
             this.rtbOutput.Text = "";
@@ -144,7 +148,7 @@
             // btnCash
             // 
             this.btnCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCash.Location = new System.Drawing.Point(846, 136);
+            this.btnCash.Location = new System.Drawing.Point(846, 149);
             this.btnCash.Name = "btnCash";
             this.btnCash.Size = new System.Drawing.Size(131, 32);
             this.btnCash.TabIndex = 8;
@@ -286,11 +290,43 @@
             this.nudInput2.Size = new System.Drawing.Size(169, 29);
             this.nudInput2.TabIndex = 22;
             // 
+            // btnTest
+            // 
+            this.btnTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnTest.Location = new System.Drawing.Point(793, 349);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(184, 34);
+            this.btnTest.TabIndex = 23;
+            this.btnTest.Text = "The missle Knows";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
+            // btnMissle
+            // 
+            this.btnMissle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnMissle.Location = new System.Drawing.Point(794, 389);
+            this.btnMissle.Name = "btnMissle";
+            this.btnMissle.Size = new System.Drawing.Size(183, 31);
+            this.btnMissle.TabIndex = 24;
+            this.btnMissle.Text = "A Button this is";
+            this.btnMissle.UseVisualStyleBackColor = true;
+            this.btnMissle.Click += new System.EventHandler(this.btnMissle_Click);
+            // 
+            // rtbString
+            // 
+            this.rtbString.Location = new System.Drawing.Point(939, 158);
+            this.rtbString.Name = "rtbString";
+            this.rtbString.Size = new System.Drawing.Size(10, 10);
+            this.rtbString.TabIndex = 25;
+            this.rtbString.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 648);
+            this.Controls.Add(this.btnMissle);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.nudInput2);
             this.Controls.Add(this.nudInput1);
             this.Controls.Add(this.btn2);
@@ -309,8 +345,9 @@
             this.Controls.Add(this.grpTempConverter);
             this.Controls.Add(this.lblMoneyConvert);
             this.Controls.Add(this.lblTemperatureConverter);
+            this.Controls.Add(this.rtbString);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = " ";
             this.grpTempConverter.ResumeLayout(false);
             this.grpTempConverter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudInput1)).EndInit();
@@ -342,6 +379,9 @@
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.NumericUpDown nudInput1;
         private System.Windows.Forms.NumericUpDown nudInput2;
+        private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.Button btnMissle;
+        private System.Windows.Forms.RichTextBox rtbString;
     }
 }
 

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WeekOfNov6th
 {
@@ -127,6 +129,43 @@ namespace WeekOfNov6th
             {
                 rtbOutput.Text += "Error: Please choose convertions" + Environment.NewLine;
             }
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            //The Missle knows where it is
+            //Thanks for the help Roman
+            rtbOutput.LoadFile("C:/Users/Sir Benjamin of hous/source/repos/weekofnov6th-BenjiKT/WeekOfNov6th/bin/test.txt", RichTextBoxStreamType.PlainText);
+            rtbOutput.Text += Environment.NewLine;
+        }
+
+        private void btnMissle_Click(object sender, EventArgs e)
+        {
+            //Thanks for the help Roman
+            rtbString.LoadFile("C:/Users/Sir Benjamin of hous/source/repos/weekofnov6th-BenjiKT/WeekOfNov6th/bin/test.txt", RichTextBoxStreamType.PlainText);
+            string text = rtbString.Text;
+            string[] missle = text.Split(' ');
+
+            if(nudInput1.Value == 0)
+            {
+                rtbOutput.Text += "The string knows it's length:" + missle.Length + Environment.NewLine;
+            }
+            else
+            {
+                int check = 1;
+                for(int i = 1; i < missle.Length+1; i++)
+                {
+                    
+                    if (check == nudInput1.Value)
+                    {
+                        rtbOutput.Text += missle[i] + ", ";
+                        check = 0;
+                    }
+                    check++;
+                }
+                rtbOutput.Text += Environment.NewLine;
+            }
+
         }
     }
 }
