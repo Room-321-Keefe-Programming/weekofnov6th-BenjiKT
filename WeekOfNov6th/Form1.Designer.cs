@@ -118,10 +118,18 @@
             this.cmbMoneyConverter.FormattingEnabled = true;
             this.cmbMoneyConverter.Items.AddRange(new object[] {
             "Dollar - Yen",
-            "Yen - Dollar"});
+            "Yen - Dollar",
+            "Dollar - Pound",
+            "Pound - Dollar",
+            "Dollar - Euro ",
+            "Euro - Dollar",
+            "Dollar - Rupee",
+            "Rupee - Dollar",
+            "Dollar - Krone",
+            "Krone - Dollar"});
             this.cmbMoneyConverter.Location = new System.Drawing.Point(321, 142);
             this.cmbMoneyConverter.Name = "cmbMoneyConverter";
-            this.cmbMoneyConverter.Size = new System.Drawing.Size(121, 32);
+            this.cmbMoneyConverter.Size = new System.Drawing.Size(169, 32);
             this.cmbMoneyConverter.TabIndex = 5;
             // 
             // btnTemp

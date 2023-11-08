@@ -55,6 +55,70 @@ namespace WeekOfNov6th
                 rtbOutput.Text += "Converting Dollar to Yen:" + Environment.NewLine + "Input 1 = " + output1 + "Yen" + Environment.NewLine + "Input 2 = " + output2 + "Yen" + Environment.NewLine;
             }
             // Yen to Dollar
+            else if (cmbMoneyConverter.Text == "Dollar - Pound")
+            {
+                double output1 = (double)nudInput1.Value * 0.81;
+                double output2 = (double)nudInput2.Value * 0.81;
+
+                rtbOutput.Text += "Converting Dollar to Pound:" + Environment.NewLine + "Input 1 = " + output1 + "Pound" + Environment.NewLine + "Input 2 = " + output2 + "Pound" + Environment.NewLine;
+            }
+
+            else if (cmbMoneyConverter.Text == "Pound - Dollar")
+            {
+                double output1 = (double)nudInput1.Value * 1.23;
+                double output2 = (double)nudInput2.Value * 1.23;
+
+                rtbOutput.Text += "Converting Pound to Dollar:" + Environment.NewLine + "Input 1 = " + output1 + "Dollar" + Environment.NewLine + "Input 2 = " + output2 + "Dollar" + Environment.NewLine;
+            }
+
+            else if (cmbMoneyConverter.Text == "Dollar - Euro ")
+            {
+                double output1 = (double)nudInput1.Value * 0.94;
+                double output2 = (double)nudInput2.Value * 0.94;
+
+                rtbOutput.Text += "Converting Dollar to Euro:" + Environment.NewLine + "Input 1 = " + output1 + "Euro" + Environment.NewLine + "Input 2 = " + output2 + "Euro" + Environment.NewLine;
+            }
+
+            else if (cmbMoneyConverter.Text == "Euro - Dollar")
+            {
+                double output1 = (double)nudInput1.Value * 1.07;
+                double output2 = (double)nudInput2.Value * 1.07;
+
+                rtbOutput.Text += "Converting Euro to Dollar:" + Environment.NewLine + "Input 1 = " + output1 + "Dollar" + Environment.NewLine + "Input 2 = " + output2 + "Dollar" + Environment.NewLine;
+            }
+
+            else if (cmbMoneyConverter.Text == "Dollar - Rupee")
+            {
+                double output1 = (double)nudInput1.Value * 83.25;
+                double output2 = (double)nudInput2.Value * 83.25;
+
+                rtbOutput.Text += "Converting Dollar to Rupee:" + Environment.NewLine + "Input 1 = " + output1 + "Rupee" + Environment.NewLine + "Input 2 = " + output2 + "Rupee" + Environment.NewLine;
+            }
+
+            else if (cmbMoneyConverter.Text == "Rupee - Dollar")
+            {
+                double output1 = (double)nudInput1.Value * 0.012;
+                double output2 = (double)nudInput2.Value * 0.012;
+
+                rtbOutput.Text += "Converting Rupee to Dollar:" + Environment.NewLine + "Input 1 = " + output1 + "Dollar" + Environment.NewLine + "Input 2 = " + output2 + "Dollar" + Environment.NewLine;
+            }
+
+            else if (cmbMoneyConverter.Text == "Dollar - Krone")
+            {
+                double output1 = (double)nudInput1.Value * 11.20;
+                double output2 = (double)nudInput2.Value * 11.20;
+
+                rtbOutput.Text += "Converting Dollar to Krone:" + Environment.NewLine + "Input 1 = " + output1 + "Krone" + Environment.NewLine + "Input 2 = " + output2 + "Krone" + Environment.NewLine;
+            }
+
+            else if (cmbMoneyConverter.Text == "Krone - Dollar")
+            {
+                double output1 = (double)nudInput1.Value * 0.089;
+                double output2 = (double)nudInput2.Value * 0.089;
+
+                rtbOutput.Text += "Converting Krone to Dollar:" + Environment.NewLine + "Input 1 = " + output1 + "Dollar" + Environment.NewLine + "Input 2 = " + output2 + "Dollar" + Environment.NewLine;
+            }
+
             else if (cmbMoneyConverter.Text == "Yen - Dollar")
             {
                 double output1 = (double)nudInput1.Value * 0.006676771;
