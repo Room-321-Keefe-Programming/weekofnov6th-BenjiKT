@@ -51,6 +51,7 @@
             this.btnTest = new System.Windows.Forms.Button();
             this.btnMissle = new System.Windows.Forms.Button();
             this.rtbString = new System.Windows.Forms.RichTextBox();
+            this.btnABC = new System.Windows.Forms.Button();
             this.grpTempConverter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudInput1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudInput2)).BeginInit();
@@ -116,6 +117,7 @@
             this.cmbMoneyConverter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMoneyConverter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMoneyConverter.FormattingEnabled = true;
+            this.cmbMoneyConverter.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.cmbMoneyConverter.Items.AddRange(new object[] {
             "Dollar - Yen",
             "Yen - Dollar",
@@ -328,11 +330,23 @@
             this.rtbString.TabIndex = 25;
             this.rtbString.Text = "";
             // 
+            // btnABC
+            // 
+            this.btnABC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnABC.Location = new System.Drawing.Point(793, 426);
+            this.btnABC.Name = "btnABC";
+            this.btnABC.Size = new System.Drawing.Size(184, 30);
+            this.btnABC.TabIndex = 26;
+            this.btnABC.Text = "So is this";
+            this.btnABC.UseVisualStyleBackColor = true;
+            this.btnABC.Click += new System.EventHandler(this.btnABC_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 648);
+            this.Controls.Add(this.btnABC);
             this.Controls.Add(this.btnMissle);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.nudInput2);
@@ -390,6 +404,7 @@
         private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.Button btnMissle;
         private System.Windows.Forms.RichTextBox rtbString;
+        private System.Windows.Forms.Button btnABC;
     }
 }
 

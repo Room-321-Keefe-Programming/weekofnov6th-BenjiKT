@@ -231,5 +231,57 @@ namespace WeekOfNov6th
             }
 
         }
+
+
+        private void btnABC_Click(object sender, EventArgs e)
+        {
+            char[] newArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+
+
+            for (int i = 0; i < newArray.Length; i++)
+            {
+                if (newArray[i] == 'A' || newArray[i] == 'E' || newArray[i] == 'I' ||newArray[i] == 'O' || newArray[i] == 'U')
+                {
+                    rtbOutput.Text += newArray[i];
+                }
+                else
+                {
+                    rtbOutput.Text += char.ToLower(newArray[i]);
+                }
+            }
+            rtbOutput.Text += Environment.NewLine;
+
+            var done = 25;
+            var now = 1;
+            var swap = false;
+            while(done >= 0)
+            {
+                if (swap)
+                {
+                    rtbOutput.Text += char.ToLower(newArray[done]);
+                }
+                else
+                {
+                    rtbOutput.Text += newArray[done];
+                }
+
+                if(now >= 5)
+                {
+                    if (swap)
+                    {
+                        swap = false;
+                    }
+                    else
+                    {
+                        swap=true;
+                    }
+                    rtbOutput.Text += ", ";
+                    now = 0;
+                }
+
+                done--;
+                now++;
+            }
+        }
     }
 }
