@@ -198,40 +198,73 @@ namespace WeekOfNov6th
         private void btnTest_Click(object sender, EventArgs e)
         {
             //The Missle knows where it is
-            //Thanks for the help Roman
-            rtbOutput.LoadFile("C:/Users/Sir Benjamin of hous/source/repos/weekofnov6th-BenjiKT/WeekOfNov6th/bin/test.txt", RichTextBoxStreamType.PlainText);
+            string fileName = "textFiles\\test.txt";
+            try
+            {
+                // Create a StreamReader
+                using (StreamReader reader = new StreamReader(fileName))
+                {
+                    string line;
+                    // Read line by line
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        rtbOutput.Text += line;
+                    }
+                }
+            }
+
+            catch (Exception exp)
+            {
+                Console.WriteLine(exp.Message);
+            }
             rtbOutput.Text += Environment.NewLine;
         }
 
         private void btnMissle_Click(object sender, EventArgs e)
         {
-            //Thanks for the help Roman
-            rtbString.LoadFile("C:/Users/Sir Benjamin of hous/source/repos/weekofnov6th-BenjiKT/WeekOfNov6th/bin/test.txt", RichTextBoxStreamType.PlainText);
-            string text = rtbString.Text;
-            string[] missle = text.Split(' ');
-
-            if(nudInput1.Value == 0)
+            string fileName = "textFiles\\test.txt";
+            string missleString = "";
+            try
             {
-                rtbOutput.Text += "The string knows it's length:" + missle.Length + Environment.NewLine;
-            }
-            else
-            {
-                int check = 1;
-                for(int i = 1; i < missle.Length+1; i++)
+                // Create a StreamReader
+                using (StreamReader reader = new StreamReader(fileName))
                 {
-                    
-                    if (check == nudInput1.Value)
+                    string line;
+                    // Read line by line
+                    while ((line = reader.ReadLine()) != null)
                     {
-                        rtbOutput.Text += missle[i] + ", ";
-                        check = 0;
+                         missleString = missleString + line;
+                        
                     }
-                    check++;
+                        string[] missle = missleString.Split(' ');
+
+                        if (nudInput1.Value == 0)
+                        {
+                            rtbOutput.Text += "The string knows it's length:" + missle.Length + Environment.NewLine;
+                        }
+                        else
+                        {
+                            int check = 1;
+                            for (int i = 1; i < missle.Length + 1; i++)
+                            {
+                                if (check == nudInput1.Value)
+                                {
+                                    rtbOutput.Text += missle[i] + ", ";
+                                    check = 0;
+                                }
+                                check++;
+                            }
+                        }
                 }
+            }
+
+            catch (Exception exp)
+            {
+                Console.WriteLine(exp.Message);
+            }
+            
                 rtbOutput.Text += Environment.NewLine;
             }
-
-        }
-
 
         private void btnABC_Click(object sender, EventArgs e)
         {
@@ -240,7 +273,7 @@ namespace WeekOfNov6th
 
             for (int i = 0; i < newArray.Length; i++)
             {
-                if (newArray[i] == 'A' || newArray[i] == 'E' || newArray[i] == 'I' ||newArray[i] == 'O' || newArray[i] == 'U')
+                if (newArray[i] == 'A' || newArray[i] == 'E' || newArray[i] == 'I' || newArray[i] == 'O' || newArray[i] == 'U')
                 {
                     rtbOutput.Text += newArray[i];
                 }
@@ -254,7 +287,7 @@ namespace WeekOfNov6th
             var done = 25;
             var now = 1;
             var swap = false;
-            while(done >= 0)
+            while (done >= 0)
             {
                 if (swap)
                 {
@@ -265,7 +298,7 @@ namespace WeekOfNov6th
                     rtbOutput.Text += newArray[done];
                 }
 
-                if(now >= 5)
+                if (now >= 5)
                 {
                     if (swap)
                     {
@@ -273,7 +306,7 @@ namespace WeekOfNov6th
                     }
                     else
                     {
-                        swap=true;
+                        swap = true;
                     }
                     rtbOutput.Text += ", ";
                     now = 0;
@@ -284,4 +317,7 @@ namespace WeekOfNov6th
             }
         }
     }
-}
+    }
+
+
+    
